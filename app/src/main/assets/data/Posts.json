@@ -1,0 +1,194 @@
+[
+  {
+    "body": "We recommend avoiding the upgrade to Android SDK Platform-Tools 29.0.0 for now, as `adb` appears to return with a non-zero exit code on Windows. Need to upgrade to Platform-Tools 29? Switch to Flutter master branch, which has a workaround.",
+    "time": "1D",
+    "numOfReply": 20,
+    "numOfReTweet": 3,
+    "numOfFavorite": 1,
+    "user": {
+      "userAccount": "Flutter",
+      "username": "FlutterDev",
+      "avatar": "https://pbs.twimg.com/profile_images/760249570085314560/yCrkrbl3_200x200.jpg"
+    }
+  },
+  {
+    "body": "Today we’re releasing Beta 4 with the final Android Q APIs and official API 29 SDK! \n\nCheck out this post to learn how to get your apps ready for the final release later this summer.\n\nGet the details here ↓",
+    "time": "2D",
+    "numOfReply": 9,
+    "numOfReTweet": 167,
+    "numOfFavorite": 461,
+    "user": {
+      "userAccount": "Android Developers",
+      "username": "AndroidDev",
+      "avatar": "https://pbs.twimg.com/profile_images/606585229034135553/2NqZJYQI_bigger.png"
+    }
+  },
+  {
+    "body": "Them: \"What would you like to take away from this meeting?\"\nMe: \"Myself.\"",
+    "time": "May 30",
+    "numOfReply": 4,
+    "numOfReTweet": 12,
+    "numOfFavorite": 133,
+    "user": {
+      "userAccount": "Chet Haase",
+      "username": "chethaase",
+      "avatar": "https://pbs.twimg.com/profile_images/1439444409/SelfPortraitSquare_200x200.jpeg"
+    }
+  },
+  {
+    "body": "TIL there's such a thing as a flexitarian.",
+    "time": "1h",
+    "numOfReply": 0,
+    "numOfReTweet": 0,
+    "numOfFavorite": 0,
+    "user": {
+      "userAccount": "Hadi Hariri",
+      "username": "hhariri",
+      "avatar": "https://pbs.twimg.com/profile_images/983417164131635200/6ToRcNzM_bigger.jpg"
+    }
+  },
+  {
+    "body": "We've had a lot of submissions on Testing this year. It's always good to see folks in the Kotlin community are big into this!",
+    "time": "1h",
+    "numOfReply": 2,
+    "numOfReTweet": 7,
+    "numOfFavorite": 80,
+    "user": {
+      "userAccount": "KotlinConf",
+      "username": "kotlinconf",
+      "avatar": "https://pbs.twimg.com/profile_images/1117836375687073799/3bL7I8L2_bigger.png"
+    }
+  },
+  {
+    "body": "We see these things every day and, meh. But imagine what a monstrosity/wonder it would be in any age except ours, and you can't help being amused.",
+    "time": "Jun 8",
+    "numOfReply": 0,
+    "numOfReTweet": 0,
+    "numOfFavorite": 7,
+    "user": {
+      "userAccount": "Filip Hráček",
+      "username": "filiphracek",
+      "avatar": "https://pbs.twimg.com/profile_images/796079953079111680/ymD9DY5g_bigger.jpg"
+    }
+  },
+  {
+    "body": "So Q branched from internal master on April 4th which means if I landed a new API into master on April 5th its source wouldn't be visible in AOSP for ~16 months. If you wanted to just file feedback on the API you wouldn't even see it for a year.\n\nThe Android \"Open Source\" Project",
+    "time": "1h",
+    "numOfReply": 7,
+    "numOfReTweet": 27,
+    "numOfFavorite": 177,
+    "user": {
+      "userAccount": "Jake Wharton",
+      "username": "JakeWharton",
+      "avatar": "https://pbs.twimg.com/profile_images/378800000666093975/cbe970ce9a19d2c6bec0d06c6004ccf0_bigger.png"
+    }
+  },
+  {
+    "body": "I asked my Twitter friends for dog photos and they didn't disappoint. \n\nBirthday wish for next year: petting all dogs, cats and bunnies you've sent today \uD83D\uDE0D\n\nThank you for making my birthday amazing!",
+    "time": "1h",
+    "numOfReply": 4,
+    "numOfReTweet": 0,
+    "numOfFavorite": 111,
+    "user": {
+      "userAccount": "JFlorina Muntenescu",
+      "username": "FMuntenescu",
+      "avatar": "https://pbs.twimg.com/profile_images/726323972686503937/nZkTQVQJ_bigger.jpg"
+    }
+  },
+  {
+    "body": "My watch: Great job! You kept your heart rate above 120 for an hour!\n\nMe: Yeah, my flight had mild turbulence.\n\nWatch: Wait, you weren't exercis--\n\nMe: MILD. TURBULENCE.",
+    "time": "May 21",
+    "numOfReply": 2,
+    "numOfReTweet": 0,
+    "numOfFavorite": 56,
+    "user": {
+      "userAccount": "Andrew Brogdon",
+      "username": "redbrogdon",
+      "avatar": "https://pbs.twimg.com/profile_images/651444930884186112/9vlhNFlu_bigger.png"
+    }
+  },
+  {
+    "body": "The president and his allies are instead trying to excuse Trump’s efforts to obstruct the entire investigation into Russian election interference by alleging problems with elements of it and claiming, without basis, that they undermine Mueller’s obstruction analysis.",
+    "time": "Jun 2",
+    "numOfReply": 544,
+    "numOfReTweet": 200,
+    "numOfFavorite": 999,
+    "user": {
+      "userAccount": "Justin Amash",
+      "username": "justinamash",
+      "avatar": "https://pbs.twimg.com/profile_images/1062568344879091712/jTRi-6Lm_bigger.jpg"
+    }
+  },
+  {
+    "body": "Oh and there will be a video recording.",
+    "time": "Jun 8",
+    "numOfReply": 0,
+    "numOfReTweet": 0,
+    "numOfFavorite": 7,
+    "user": {
+      "userAccount": "Filip Hráček",
+      "username": "filiphracek",
+      "avatar": "https://pbs.twimg.com/profile_images/796079953079111680/ymD9DY5g_bigger.jpg"
+    }
+  },
+  {
+    "body": "▓▓▓▓▓▓░░░░░░░░░ 43%",
+    "time": "Jun 8",
+    "numOfReply": 42,
+    "numOfReTweet": 1400,
+    "numOfFavorite": 5900,
+    "user": {
+      "userAccount": "Year Progress",
+      "username": "year_progress",
+      "avatar": "https://pbs.twimg.com/profile_images/722531688987820032/gfWnXqTw_bigger.jpg"
+    }
+  },
+  {
+    "body": "Oh dang it wasn’t just Bay Area Maker faire that was being shut down (that was already rumored) but the entire Make: \n\nIt’s sad, Make: community were one of the 1st one I got involved when I moved to US without knowing much friends \uD83D\uDE22",
+    "time": "Jun 8",
+    "numOfReply": 1,
+    "numOfReTweet": 8,
+    "numOfFavorite": 22,
+    "user": {
+      "userAccount": "Mariko Kosaka",
+      "username": "kosamari",
+      "avatar": "https://pbs.twimg.com/profile_images/593793041816629248/yKbOT56n_bigger.jpg"
+    }
+  },
+  {
+    "body": "(I never did contribute to Ubuntu, but that was mainly because Some Dude there kept asking if I was looking for a boyfriend \uD83D\uDE44\uD83D\uDE44\uD83D\uDE44)",
+    "time": "May 30",
+    "numOfReply": 13,
+    "numOfReTweet": 89,
+    "numOfFavorite": 545,
+    "user": {
+      "userAccount": "Emily Fortuna",
+      "username": "bouncingsheep",
+      "avatar": "https://pbs.twimg.com/profile_images/343819061/largeSheepieCropped_200x200.png"
+    }
+  },
+  {
+    "body": "Yay. Have to be conservative when you add to a stdlib too, due to \"you got it forever\" (see Java stdlib that has \"2\" in some class names), but given how userspace bytes hurt, moar builtin plz!",
+    "time": "10h",
+    "numOfReply": 1,
+    "numOfReTweet": 9,
+    "numOfFavorite": 6,
+    "user": {
+      "userAccount": "Dion Almaer",
+      "username": "dalmaer",
+      "avatar": "https://pbs.twimg.com/profile_images/3380865881/f73b3687ff39b795db05fcaf35972270_bigger.jpeg"
+    }
+  },
+  {
+    "body": "When I worked on iTunes 10, Steve requested to remove all icons from the source list (sidebar). I created shaded monochrome icons as a last-ditch effort to save them. The request to *remove icons* inadvertently shifted the sidebar icon style on a system level for the next decade.",
+    "time": "Jun 8",
+    "numOfReply": 13,
+    "numOfReTweet": 89,
+    "numOfFavorite": 545,
+    "user": {
+      "userAccount": "Louie Mantia Jr.",
+      "username": "Mantia",
+      "avatar": "https://pbs.twimg.com/profile_images/1135245143584284672/pPSJYdWM_bigger.png"
+    }
+  }
+]
