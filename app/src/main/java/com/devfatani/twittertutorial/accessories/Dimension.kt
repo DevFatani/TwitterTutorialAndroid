@@ -1,12 +1,14 @@
 package com.devfatani.twittertutorial.accessories
 
 
+import android.app.Activity
 import android.content.Context
 import android.util.TypedValue
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import android.util.DisplayMetrics
 
 
 enum class LayoutParamsType(val value: Int) {
@@ -27,6 +29,17 @@ object Dimension {
             unit.value,
             size,
             context.resources.displayMetrics
+        )
+
+    fun getViewParams(
+        width: LayoutParamsType = LayoutParamsType.NONE,
+        height: LayoutParamsType = LayoutParamsType.NONE,
+        numericWidth: Int = 0,
+        numericHeight: Int = 0
+    ): ViewGroup.LayoutParams =
+        ViewGroup.LayoutParams(
+            if (width != LayoutParamsType.NONE) width.value else numericWidth,
+            if (height != LayoutParamsType.NONE) height.value else numericHeight
         )
 
     fun getRLayoutParams(
@@ -66,5 +79,13 @@ object Dimension {
             if (height != LayoutParamsType.NONE) height.value else numericHeight,
             gravity
         )
+
+    fun getScreenSize(activity: Activity): Pair<Int, Int> {
+        val displayMetrics = DisplayMetrics()
+        activity.windowManager.defaultDisplay.getMetrics(displayMetrics)
+        val height = displayMetrics.heightPixels
+        val width = displayMetrics.widthPixels
+        return Pair(height, width)
+    }
 
 }
