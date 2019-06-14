@@ -15,10 +15,10 @@ import de.hdodenhof.circleimageview.CircleImageView
 class AppBarView(context: Context) : RelativeLayout(context) {
     private val rightIconFeed = TextView(context).apply {
         typeface = FontType.getFont(context, FontsName.FONTELLO)
-        text = String(Character.toChars(0xE804))
-        setTextColor(0xff327FFF.toInt())
+        text = String(Character.toChars(0xE806))
+        setTextColor(0xff2DA5EC.toInt())
         gravity = Gravity.CENTER
-        textSize = Dimension.getSystemSize(context, 10f, SizeUnit.SP)
+        textSize = Dimension.getSystemSize(context, 8f, SizeUnit.SP)
     }
 
     private val title = TextView(context).apply {
