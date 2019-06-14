@@ -1,41 +1,78 @@
 package com.devfatani.twittertutorial
 
-import android.animation.Animator
-import android.support.v7.app.AppCompatActivity
+import android.app.Activity
+import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
-import android.view.animation.DecelerateInterpolator
+import android.view.View
+
+import android.widget.FrameLayout
 import android.widget.LinearLayout
 import com.devfatani.twittertutorial.accessories.Dimension
 import com.devfatani.twittertutorial.accessories.FetchMockData
 import com.devfatani.twittertutorial.accessories.LayoutParamsType
 import com.devfatani.twittertutorial.model.Post
-import com.devfatani.twittertutorial.model.User
 import com.devfatani.twittertutorial.view.AppBarView
 import com.devfatani.twittertutorial.view.listFeed.ListFeed
-import com.devfatani.twittertutorial.view.listFeed.PostCell
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
+import com.devfatani.twittertutorial.view.slideView.SlideView
 import org.json.JSONArray
 import org.json.JSONObject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : Activity() {
+
+
+    private val masterView: LinearLayout by lazy(LazyThreadSafetyMode.NONE) {
+        LinearLayout(this).apply {
+            layoutDirection = View.LAYOUT_DIRECTION_RTL
+            orientation = LinearLayout.HORIZONTAL
+        }
+    }
+
+    private val containerViewsAndBlack: FrameLayout by lazy(LazyThreadSafetyMode.NONE) {
+        FrameLayout(this)
+    }
+
+    private val containerViews: LinearLayout by lazy(LazyThreadSafetyMode.NONE) {
+        LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+        }
+    }
+
+    private val blackView: View by lazy(LazyThreadSafetyMode.NONE) {
+        View(this).apply {
+            setBackgroundColor(Color.BLACK)
+            alpha = 0f
+            layoutParams = Dimension.getViewParams(
+                width = LayoutParamsType.FILL,
+                height = LayoutParamsType.FILL
+            )
+            setOnClickListener { slideView.hideSlideView() }
+        }
+    }
+
+    private val appBarView: AppBarView by lazy(LazyThreadSafetyMode.NONE) {
+        AppBarView(this)
+    }
+
+    private val listFeed: ListFeed by lazy(LazyThreadSafetyMode.NONE) {
+        ListFeed(this)
+    }
+
+    private val slideView: SlideView by lazy(LazyThreadSafetyMode.NONE) {
+        SlideView(this, containerViewsAndBlack, blackView)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val mainLayout = LinearLayout(this)
-        mainLayout.setBackgroundColor(0xff7171cc.toInt())
-        mainLayout.orientation = LinearLayout.VERTICAL
-        mainLayout.layoutParams = Dimension.getLLayoutParams(
-            width = LayoutParamsType.FILL,
-            height = LayoutParamsType.FILL
-        )
-        val appBarView = AppBarView(this)
-        val listFeed = ListFeed(this)
+        containerViewsAndBlack.addView(containerViews)
+        containerViewsAndBlack.addView(blackView)
+        masterView.addView(containerViewsAndBlack)
+        masterView.addView(slideView)
 
-//        mainLayout.addView(listFeed)
-        setContentView(mainLayout)
+        setContentView(
+            masterView,
+            Dimension.getLLayoutParams(width = LayoutParamsType.FILL, height = LayoutParamsType.FILL)
+        )
 
         val postsArrayJSON = JSONArray(FetchMockData.loadJSONFromAssetBy("Posts", this))
         val posts = ArrayList<Post>()
@@ -43,35 +80,14 @@ class MainActivity : AppCompatActivity() {
             posts.add(Post.parse(JSONObject(postsArrayJSON[i].toString())))
         }
         listFeed.setPosts(posts)
-        mainLayout.addView(appBarView)
-//        mainLayout.addView(PostCell(this, posts[0]))
-        mainLayout.addView(listFeed)
+        containerViews.addView(appBarView)
+        containerViews.addView(listFeed)
+
+
         appBarView.setLeftProfileImageAction {
-            mainLayout
-                .animate()
-                .translationX(500f)
-                .setDuration(500)
-                .setInterpolator(object : DecelerateInterpolator() {
+            slideView.toggleView()
 
-                })
-                .setListener(object : Animator.AnimatorListener {
-                    override fun onAnimationRepeat(animation: Animator?) {
-
-                    }
-
-                    override fun onAnimationEnd(animation: Animator?) {
-
-                    }
-
-                    override fun onAnimationCancel(animation: Animator?) {
-
-                    }
-
-                    override fun onAnimationStart(animation: Animator?) {
-
-                    }
-
-                }).start()
         }
     }
+
 }
