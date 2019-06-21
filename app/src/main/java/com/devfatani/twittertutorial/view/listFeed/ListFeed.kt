@@ -1,11 +1,11 @@
 package com.devfatani.twittertutorial.view.listFeed
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
 import android.widget.ListView
-import com.devfatani.twittertutorial.accessories.Dimension
-import com.devfatani.twittertutorial.accessories.LayoutParamsType
 import com.devfatani.twittertutorial.model.Post
+import com.devfatani.twittertutorial.accessories.Dimension
 
 class ListFeed(context: Context) : ListView(context) {
 
@@ -18,8 +18,8 @@ class ListFeed(context: Context) : ListView(context) {
         adapter = postAdapter
         divider = null
         layoutParams = Dimension.getFrameLayoutParams(
-            width = LayoutParamsType.FILL,
-            height = LayoutParamsType.FILL
+            width = Dimension.Type.FILL,
+            height = Dimension.Type.FILL
         )
     }
 

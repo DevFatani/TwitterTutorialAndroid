@@ -18,7 +18,7 @@ class AppBarView(context: Context) : RelativeLayout(context) {
         text = String(Character.toChars(0xE806))
         setTextColor(0xff2DA5EC.toInt())
         gravity = Gravity.CENTER
-        textSize = Dimension.getSystemSize(context, 8f, SizeUnit.SP)
+        textSize = Dimension.getSystemSize(context, 8f, Dimension.Unit.SP)
     }
 
     private val title = TextView(context).apply {
@@ -43,44 +43,44 @@ class AppBarView(context: Context) : RelativeLayout(context) {
 
         //layout
         val rightIconFeedParams = Dimension.getRLayoutParams(
-            numericWidth = Dimension.getSystemSize(context, 50f, SizeUnit.DP).toInt(),
-            height = LayoutParamsType.FILL
+            numericWidth = Dimension.getSystemSize(context, 50f, Dimension.Unit.DP).toInt(),
+            height = Dimension.Type.FILL
         )
         rightIconFeedParams.addRule(ALIGN_PARENT_RIGHT)
         rightIconFeed.layoutParams = rightIconFeedParams
 
         val titleParams = Dimension.getRLayoutParams(
-            width = LayoutParamsType.WRAP,
-            height = LayoutParamsType.FILL
+            width = Dimension.Type.WRAP,
+            height = Dimension.Type.FILL
         )
         titleParams.addRule(CENTER_IN_PARENT)
         title.layoutParams = titleParams
 
 
         val leftProfileImageParams = Dimension.getRLayoutParams(
-            numericWidth = Dimension.getSystemSize(context, 35f, SizeUnit.DP).toInt(),
+            numericWidth = Dimension.getSystemSize(context, 35f, Dimension.Unit.DP).toInt(),
             numericHeight = Dimension.getSystemSize(
-                context, 35f, SizeUnit.DP
+                context, 35f, Dimension.Unit.DP
             ).toInt()
         )
         leftProfileImageParams.setMargins(
-            Dimension.getSystemSize(context, 15f, SizeUnit.DP).toInt(),
-            Dimension.getSystemSize(context, 10f, SizeUnit.DP).toInt(),
+            Dimension.getSystemSize(context, 15f, Dimension.Unit.DP).toInt(),
+            Dimension.getSystemSize(context, 10f, Dimension.Unit.DP).toInt(),
             0,
             0
         )
         leftProfileImage.layoutParams = leftProfileImageParams
 
         val bottomLineParams = Dimension.getRLayoutParams(
-            width = LayoutParamsType.FILL,
-           numericHeight = Dimension.getSystemSize(context, 1f, SizeUnit.DP).toInt()
+            width = Dimension.Type.FILL,
+            numericHeight = Dimension.getSystemSize(context, 1f, Dimension.Unit.DP).toInt()
         )
         bottomLineParams.addRule(ALIGN_PARENT_BOTTOM)
         bottomLine.layoutParams = bottomLineParams
 
         layoutParams = Dimension.getRLayoutParams(
-            width = LayoutParamsType.FILL,
-            numericHeight = Dimension.getSystemSize(context, 50f, SizeUnit.DP).toInt()
+            width = Dimension.Type.FILL,
+            numericHeight = Dimension.getSystemSize(context, 50f, Dimension.Unit.DP).toInt()
         )
         addView(rightIconFeed)
         addView(title)

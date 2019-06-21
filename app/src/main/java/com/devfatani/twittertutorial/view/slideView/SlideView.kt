@@ -19,19 +19,20 @@ import com.devfatani.twittertutorial.accessories.*
 import de.hdodenhof.circleimageview.CircleImageView
 
 @SuppressLint("ViewConstructor")
-class SlideView(private val activity: Activity, private val container: View, val blackView: View) : FrameLayout(activity) {
+class SlideView(private val activity: Activity, private val container: View, val blackView: View) :
+    FrameLayout(activity) {
 
     private var isOpen = false
 
     private val topRightIcon = TextView(context).apply {
         typeface = FontType.getFont(context, FontsName.FONTELLO)
         text = String(Character.toChars(0xE805))
-        textSize = Dimension.getSystemSize(context, 8f, SizeUnit.SP)
+        textSize = Dimension.getSystemSize(context, 8f, Dimension.Unit.SP)
         setTextColor(0xff2DA5EC.toInt())
         setBackgroundColor(Color.YELLOW)
         gravity = Gravity.CENTER
         background = Shaper.getShape(cornerRadius = 70f, borderColor = 0xff2DA5EC.toInt(), borderWidth = 6)
-        val dim10 = Dimension.getSystemSize(context, 35f, SizeUnit.DP).toInt()
+        val dim10 = Dimension.getSystemSize(context, 35f, Dimension.Unit.DP).toInt()
         val params = Dimension.getFrameLayoutParams(
             numericWidth = dim10,
             numericHeight = dim10,
@@ -39,8 +40,8 @@ class SlideView(private val activity: Activity, private val container: View, val
         )
         params.setMargins(
             0,
-            Dimension.getSystemSize(context, 12f, SizeUnit.DP).toInt(),
-            Dimension.getSystemSize(context, 7f, SizeUnit.DP).toInt(),
+            Dimension.getSystemSize(context, 12f, Dimension.Unit.DP).toInt(),
+            Dimension.getSystemSize(context, 7f, Dimension.Unit.DP).toInt(),
             0
         )
         layoutParams = params
@@ -49,14 +50,14 @@ class SlideView(private val activity: Activity, private val container: View, val
     private val mainContainer = LinearLayout(context).apply {
         orientation = LinearLayout.VERTICAL
         layoutParams = Dimension.getFrameLayoutParams(
-            width = LayoutParamsType.FILL,
-            height = LayoutParamsType.FILL
+            width = Dimension.Type.FILL,
+            height = Dimension.Type.FILL
         )
     }
 
     private val leftProfileImage = CircleImageView(context).apply {
         setImageDrawable(ContextCompat.getDrawable(context, R.drawable.cat_profile))
-        val dim = Dimension.getSystemSize(context, 50f, SizeUnit.DP).toInt()
+        val dim = Dimension.getSystemSize(context, 50f, Dimension.Unit.DP).toInt()
         val params = Dimension.getLLayoutParams(
             numericWidth = dim,
             numericHeight = dim
@@ -64,9 +65,9 @@ class SlideView(private val activity: Activity, private val container: View, val
         params.gravity = Gravity.LEFT
         params.setMargins(
             0,
-            Dimension.getSystemSize(context, 15f, SizeUnit.DP).toInt(),
+            Dimension.getSystemSize(context, 15f, Dimension.Unit.DP).toInt(),
             0,
-            Dimension.getSystemSize(context, 10f, SizeUnit.DP).toInt()
+            Dimension.getSystemSize(context, 10f, Dimension.Unit.DP).toInt()
         )
         layoutParams = params
     }
@@ -90,7 +91,7 @@ class SlideView(private val activity: Activity, private val container: View, val
         tvFollowing.text = "Following"
         tvFollowing.setTextColor(Color.GRAY)
         tvFollowing.textSize = 16f
-        tvFollowing.setPadding(Dimension.getSystemSize(context, 5f, SizeUnit.DP).toInt(), 0, 0, 0)
+        tvFollowing.setPadding(Dimension.getSystemSize(context, 5f, Dimension.Unit.DP).toInt(), 0, 0, 0)
 
         val tvNum = TextView(context)
         tvNum.text = "99"
@@ -99,7 +100,7 @@ class SlideView(private val activity: Activity, private val container: View, val
 
         addView(tvFollowing)
         addView(tvNum)
-        layoutParams = Dimension.getLLayoutParams(width = LayoutParamsType.WRAP, height = LayoutParamsType.WRAP)
+        layoutParams = Dimension.getLLayoutParams(width = Dimension.Type.WRAP, height = Dimension.Type.WRAP)
     }
 
     private val followersContainer = LinearLayout(context).apply {
@@ -107,7 +108,7 @@ class SlideView(private val activity: Activity, private val container: View, val
         tvFollower.text = "Follower"
         tvFollower.setTextColor(Color.GRAY)
         tvFollower.textSize = 16f
-        tvFollower.setPadding(Dimension.getSystemSize(context, 5f, SizeUnit.DP).toInt(), 0, 0, 0)
+        tvFollower.setPadding(Dimension.getSystemSize(context, 5f, Dimension.Unit.DP).toInt(), 0, 0, 0)
 
         val tvNum = TextView(context)
         tvNum.text = "99"
@@ -116,21 +117,21 @@ class SlideView(private val activity: Activity, private val container: View, val
 
         addView(tvFollower)
         addView(tvNum)
-        setPadding(Dimension.getSystemSize(context, 10f, SizeUnit.DP).toInt(), 0, 0, 0)
-        layoutParams = Dimension.getLLayoutParams(width = LayoutParamsType.WRAP, height = LayoutParamsType.WRAP)
+        setPadding(Dimension.getSystemSize(context, 10f, Dimension.Unit.DP).toInt(), 0, 0, 0)
+        layoutParams = Dimension.getLLayoutParams(width = Dimension.Type.WRAP, height = Dimension.Type.WRAP)
     }
 
     private val containersFollow = LinearLayout(context).apply {
         gravity = Gravity.LEFT
-        setPadding(0, Dimension.getSystemSize(context, 10f, SizeUnit.DP).toInt(), 0, 0)
+        setPadding(0, Dimension.getSystemSize(context, 10f, Dimension.Unit.DP).toInt(), 0, 0)
     }
 
     private val myList = TextView(context).apply {
         text = "My List"
         setTextColor(Color.BLACK)
-        textSize = Dimension.getSystemSize(context, 30f, SizeUnit.DP)
+        textSize = Dimension.getSystemSize(context, 30f, Dimension.Unit.DP)
         gravity = Gravity.CENTER
-        layoutParams = Dimension.getLLayoutParams(width = LayoutParamsType.FILL, height = LayoutParamsType.FILL)
+        layoutParams = Dimension.getLLayoutParams(width = Dimension.Type.FILL, height = Dimension.Type.FILL)
     }
 
     init {
@@ -152,10 +153,10 @@ class SlideView(private val activity: Activity, private val container: View, val
         val halfScreen = Dimension.getScreenSize(activity).first * 0.5
         val params = Dimension.getLLayoutParams(
             numericWidth = halfScreen.toInt(),
-            height = LayoutParamsType.FILL
+            height = Dimension.Type.FILL
         )
         setPadding(
-            Dimension.getSystemSize(context, 20f, SizeUnit.DP).toInt(),
+            Dimension.getSystemSize(context, 20f, Dimension.Unit.DP).toInt(),
             0,
             0,
             0

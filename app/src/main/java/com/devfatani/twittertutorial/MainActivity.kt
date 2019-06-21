@@ -9,7 +9,6 @@ import android.widget.FrameLayout
 import android.widget.LinearLayout
 import com.devfatani.twittertutorial.accessories.Dimension
 import com.devfatani.twittertutorial.accessories.FetchMockData
-import com.devfatani.twittertutorial.accessories.LayoutParamsType
 import com.devfatani.twittertutorial.model.Post
 import com.devfatani.twittertutorial.view.AppBarView
 import com.devfatani.twittertutorial.view.listFeed.ListFeed
@@ -42,8 +41,8 @@ class MainActivity : Activity() {
             setBackgroundColor(Color.BLACK)
             alpha = 0f
             layoutParams = Dimension.getViewParams(
-                width = LayoutParamsType.FILL,
-                height = LayoutParamsType.FILL
+                width =   Dimension.Type.FILL,
+                height =   Dimension.Type.FILL
             )
             setOnClickListener { slideView.hideSlideView() }
         }
@@ -71,7 +70,7 @@ class MainActivity : Activity() {
 
         setContentView(
             masterView,
-            Dimension.getLLayoutParams(width = LayoutParamsType.FILL, height = LayoutParamsType.FILL)
+            Dimension.getLLayoutParams(width = Dimension.Type.FILL, height = Dimension.Type.FILL)
         )
 
         val postsArrayJSON = JSONArray(FetchMockData.loadJSONFromAssetBy("Posts", this))

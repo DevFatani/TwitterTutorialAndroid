@@ -16,7 +16,7 @@ import de.hdodenhof.circleimageview.CircleImageView
 @SuppressLint("ViewConstructor")
 class PostCell(context: Context, post: Post) : LinearLayout(context) {
     private val ivUserImageProfile = CircleImageView(context).apply {
-        val dim50 = Dimension.getSystemSize(context, 50f, SizeUnit.DP).toInt()
+        val dim50 = Dimension.getSystemSize(context, 50f, Dimension.Unit.DP).toInt()
         Picasso
             .get()
             .load(post.user.avatar).resize(dim50, dim50)
@@ -40,14 +40,14 @@ class PostCell(context: Context, post: Post) : LinearLayout(context) {
         setTextColor(Color.DKGRAY)
 
         val params = Dimension.getFrameLayoutParams(
-            width = LayoutParamsType.WRAP,
-            height = LayoutParamsType.WRAP
+            width = Dimension.Type.WRAP,
+            height = Dimension.Type.WRAP
         )
 
         params.setMargins(
-            Dimension.getSystemSize(context, 4f, SizeUnit.DP).toInt(),
+            Dimension.getSystemSize(context, 4f, Dimension.Unit.DP).toInt(),
             0,
-            Dimension.getSystemSize(context, 4f, SizeUnit.DP).toInt(),
+            Dimension.getSystemSize(context, 4f, Dimension.Unit.DP).toInt(),
             0
         )
         layoutParams = params
@@ -62,7 +62,7 @@ class PostCell(context: Context, post: Post) : LinearLayout(context) {
         text = post.body
         setLineSpacing(20f, 1.0f)
         setTextColor(Color.BLACK)
-        setPadding(0, 0, Dimension.getSystemSize(context, 5f, SizeUnit.DP).toInt(), 0)
+        setPadding(0, 0, Dimension.getSystemSize(context, 5f, Dimension.Unit.DP).toInt(), 0)
     }
 
     private val tvShareIcon = TextView(context).apply {
@@ -73,7 +73,7 @@ class PostCell(context: Context, post: Post) : LinearLayout(context) {
 
         layoutParams = Dimension.getLLayoutParams(
             numericWidth = 0,
-            height = LayoutParamsType.WRAP,
+            height = Dimension.Type.WRAP,
             weight = 1f
         )
     }
@@ -103,7 +103,7 @@ class PostCell(context: Context, post: Post) : LinearLayout(context) {
 
         layoutParams = Dimension.getLLayoutParams(
             numericWidth = 0,
-            height = LayoutParamsType.WRAP,
+            height = Dimension.Type.WRAP,
             weight = 1f
         )
     }
@@ -133,7 +133,7 @@ class PostCell(context: Context, post: Post) : LinearLayout(context) {
 
         layoutParams = Dimension.getLLayoutParams(
             numericWidth = 0,
-            height = LayoutParamsType.WRAP,
+            height = Dimension.Type.WRAP,
             weight = 1f
         )
     }
@@ -164,7 +164,7 @@ class PostCell(context: Context, post: Post) : LinearLayout(context) {
 
         layoutParams = Dimension.getLLayoutParams(
             numericWidth = 0,
-            height = LayoutParamsType.WRAP,
+            height = Dimension.Type.WRAP,
             weight = 1f
         )
 
@@ -173,8 +173,8 @@ class PostCell(context: Context, post: Post) : LinearLayout(context) {
     private val separatorLine = View(context).apply {
         setBackgroundColor(Color.LTGRAY)
         layoutParams = Dimension.getLLayoutParams(
-            width = LayoutParamsType.FILL,
-            numericHeight = Dimension.getSystemSize(context, 1f, SizeUnit.DP).toInt()
+            width = Dimension.Type.FILL,
+            numericHeight = Dimension.getSystemSize(context, 1f, Dimension.Unit.DP).toInt()
         )
     }
 
@@ -186,15 +186,15 @@ class PostCell(context: Context, post: Post) : LinearLayout(context) {
     private val leftContainer = LinearLayout(context).apply {
         setPadding(
             Dimension.getSystemSize(
-                context, 10f, SizeUnit.DP
+                context, 10f, Dimension.Unit.DP
             ).toInt(),
-            Dimension.getSystemSize(context, 5f, SizeUnit.DP).toInt(),
+            Dimension.getSystemSize(context, 5f, Dimension.Unit.DP).toInt(),
             0,
             0
         )
         layoutParams = Dimension.getLLayoutParams(
             numericWidth = 0,
-            height = LayoutParamsType.FILL,
+            height = Dimension.Type.FILL,
             weight = 0.4f
         )
     }
@@ -203,7 +203,7 @@ class PostCell(context: Context, post: Post) : LinearLayout(context) {
         orientation = VERTICAL
         layoutParams = Dimension.getLLayoutParams(
             numericWidth = 0,
-            height = LayoutParamsType.FILL,
+            height = Dimension.Type.FILL,
             weight = 1.6f
         )
     }
@@ -213,8 +213,8 @@ class PostCell(context: Context, post: Post) : LinearLayout(context) {
     private val iconsContainer = LinearLayout(context).apply {
         gravity = Gravity.CENTER
         layoutParams = Dimension.getLLayoutParams(
-            width = LayoutParamsType.FILL,
-            numericHeight = Dimension.getSystemSize(context, 40f, SizeUnit.DP).toInt()
+            width = Dimension.Type.FILL,
+            numericHeight = Dimension.getSystemSize(context, 40f, Dimension.Unit.DP).toInt()
         )
     }
 
@@ -223,10 +223,10 @@ class PostCell(context: Context, post: Post) : LinearLayout(context) {
         setBackgroundColor(Color.WHITE)
         layoutDirection = View.LAYOUT_DIRECTION_LTR
 
-        setPadding(0, Dimension.getSystemSize(context, 10f, SizeUnit.DP).toInt(), 0, 0)
+        setPadding(0, Dimension.getSystemSize(context, 10f, Dimension.Unit.DP).toInt(), 0, 0)
         layoutParams = Dimension.getLLayoutParams(
-            width = LayoutParamsType.FILL,
-            height = LayoutParamsType.WRAP
+            width = Dimension.Type.FILL,
+            height = Dimension.Type.WRAP
         )
 
         leftContainer.addView(ivUserImageProfile)

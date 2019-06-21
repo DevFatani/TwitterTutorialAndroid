@@ -20,11 +20,11 @@ class IconWithCountNumber(context: Context, iconCode: Int, count: Int) : LinearL
         setTextColor(Color.DKGRAY)
 
         val params = Dimension.getLLayoutParams(
-            width = LayoutParamsType.WRAP,
-            height = LayoutParamsType.WRAP
+            width = Dimension.Type.WRAP,
+            height = Dimension.Type.WRAP
         )
         params.setMargins(
-            Dimension.getSystemSize(context, 5f, SizeUnit.DP).toInt(),
+            Dimension.getSystemSize(context, 5f, Dimension.Unit.DP).toInt(),
             0,
             0,
             0
